@@ -39,7 +39,7 @@ code --install-extension visualrpc-1.0.0.vsix
 ### Из исходников
 
 ```bash
-git clone https://github.com/username/VisualRPC.git
+git clone https://github.com/Xwalims/VisualRPC.git
 cd VisualRPC
 npm install
 npm run build
