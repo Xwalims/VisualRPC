@@ -1,0 +1,52 @@
+{
+  "name": "visualrpc",
+  "displayName": "VisualRPC",
+  "description": "Discord Rich Presence for VS Code — show what you're coding!",
+  "version": "1.0.0",
+  "publisher": "visualrpc",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "visualrpc.enable",
+        "title": "VisualRPC: Enable"
+      },
+      {
+        "command": "visualrpc.disable",
+        "title": "VisualRPC: Disable"
+      },
+      {
+        "command": "visualrpc.reconnect",
+        "title": "VisualRPC: Reconnect to Discord"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "postinstall": "node patch.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  }
+}
